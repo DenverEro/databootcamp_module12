@@ -27,7 +27,7 @@ The goal was to set up a NoSQL database, clean and update the data, and perform 
 
 - ✅ Inserted a new halal restaurant: **Penang Flavours**
 - ✅ Found and updated its correct `BusinessTypeID`: **1**
-- ✅ Deleted all records from the **Dover** local authority
+- ✅ Deleted all records from the **Dover** local authority  
   - **Documents deleted:** 994
 - ✅ Converted data types:
   - `geocode.latitude` and `geocode.longitude`: string → decimal
@@ -38,24 +38,29 @@ The goal was to set up a NoSQL database, clean and update the data, and perform 
 
 ## 🔍 Part 3: Exploratory Analysis & Findings
 
-### 1. Establishments with a hygiene score of 20
+### 1. Establishments with a Hygiene Score of 20
 - **Total results:** 41
 - These establishments have poor hygiene and may be unsafe for consumers.
 - Sample entry:
-  ```json
-  {
-    "BusinessName": "Ali Baba",
-    "scores": { "Hygiene": 20, ... },
-    ...
-  }
+
+```json
+{
+  "BusinessName": "Ali Baba",
+  "scores": { "Hygiene": 20, ... }
+}
 ```
-## 2. London establishments with a RatingValue ≥ 4
+
+---
+
+### 2. London Establishments with a RatingValue ≥ 4
 
 - **Total found:** 33  
 - Indicates a small subset of high-rated establishments among London's food scene.  
 - Used `$regex` to match `"London"` in `LocalAuthorityName`.
 
-## 3. Top 5 best-rated establishments near "Penang Flavours"
+---
+
+### 3. Top 5 Best-Rated Establishments Near "Penang Flavours"
 
 **Criteria:**
 - `RatingValue = 5`
@@ -73,7 +78,10 @@ These are the safest and highest-rated options near Penang Flavours for food cri
   "Distance": 4599.12
 }
 ```
-## 4. Top 10 Local Authorities with Most Establishments Scoring 0 in Hygiene
+
+---
+
+### 4. Top 10 Local Authorities with Most Establishments Scoring 0 in Hygiene
 
 This indicates areas with the greatest concentration of hygiene concerns.
 
