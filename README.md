@@ -48,7 +48,7 @@ The goal was to set up a NoSQL database, clean and update the data, and perform 
     "scores": { "Hygiene": 20, ... },
     ...
   }
-
+```
 ## 2. London establishments with a RatingValue ≥ 4
 
 - **Total found:** 33  
@@ -72,7 +72,7 @@ These are the safest and highest-rated options near Penang Flavours for food cri
   "scores": { "Hygiene": 0 },
   "Distance": 4599.12
 }
-
+```
 ## 4. Top 10 Local Authorities with Most Establishments Scoring 0 in Hygiene
 
 This indicates areas with the greatest concentration of hygiene concerns.
